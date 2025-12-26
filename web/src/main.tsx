@@ -24,6 +24,7 @@ function App() {
     "idle",
   );
   const [userId, setUserId] = useState<string | null>(null);
+  const siteUrl = import.meta.env.VITE_SITE_URL ?? window.location.origin;
 
   useEffect(() => {
     let ignore = false;
@@ -91,7 +92,7 @@ function App() {
     setSessionStatus("loading");
     const { error: signInError } = await supabase.auth.signInWithOtp({
       email,
-      options: { emailRedirectTo: window.location.origin },
+      options: { emailRedirectTo: siteUrl },
     });
     if (signInError) {
       setSessionError(signInError.message);

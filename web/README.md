@@ -60,6 +60,8 @@ A web remake of the bundled macOS HabitTracker app. It mirrors the dark UI, habi
    From your Supabase project settings, grab:
    - `VITE_SUPABASE_URL`
    - `VITE_SUPABASE_ANON_KEY`
+   And set the site URL used for magic link redirects:
+   - `VITE_SITE_URL` (e.g. your Netlify URL like https://your-site.netlify.app; dev falls back to window.location.origin)
 
 ## Local development
 
@@ -100,9 +102,10 @@ A web remake of the bundled macOS HabitTracker app. It mirrors the dark UI, habi
    - Build command: `npm run build`
    - Publish directory: `HabitTracker/web/dist`
 
-3) **Environment variables (Netlify UI)**
-   - `VITE_SUPABASE_URL`
-   - `VITE_SUPABASE_ANON_KEY`
+3) **Environment variables (Netlify UI)**  
+   - `VITE_SUPABASE_URL`  
+   - `VITE_SUPABASE_ANON_KEY`  
+   - `VITE_SITE_URL` (your Netlify site URL for magic link redirects)
 
 4) **Deploy**
    - Trigger a deploy. Netlify will build and host your site at your chosen domain.
