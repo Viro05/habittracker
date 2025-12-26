@@ -1,0 +1,13 @@
+[build]
+  base = "HabitTracker/web"
+  publish = "dist"
+  command = "npm run build"
+
+[build.environment]
+  NODE_VERSION = "18"
+
+[dev]
+  framework = "vite"
+  targetPort = 5173
+  port = 8888
+  autoLaunch = false
