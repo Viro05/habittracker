@@ -1,5 +1,5 @@
 [build]
-  base = "HabitTracker/web"
+  base = "web"
   publish = "dist"
   command = "npm run build"
 
